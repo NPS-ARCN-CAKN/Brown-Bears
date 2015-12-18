@@ -105,3 +105,4 @@ for row in arr:
 # close the output file
 file.close()
 arcpy.AddMessage('Done\n')
+arcpy.AddMessage('SQL insert query script available at ' + OutputFile + '\n')
