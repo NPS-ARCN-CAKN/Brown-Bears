@@ -102,12 +102,12 @@ for row in arr:
     # write the query to the sql script file
     file.write(sql)
 
-    # commit/rollback reminder
-    file.write("-- Do not forget to COMMIT or ROLLBACK the changes after executing or the database will be in a locked state \n")
+# commit/rollback reminder
+file.write("-- Do not forget to COMMIT or ROLLBACK the changes after executing or the database will be in a locked state \n")
 
-    # a convenience query for checking the inserted records
-    file.write("-- Execute the query below after committing records to retrieve the inserted records")
-    file.write("-- SELECT * FROM Locations WHERE SurveyID = '" + surveyid + "';")
+# a convenience query for checking the inserted records
+file.write("-- Execute the query below after committing records to retrieve the inserted records\n")
+file.write("-- SELECT * FROM Locations WHERE SurveyID = '" + surveyid + "';\n")
 
 # close the output file
 file.close()
