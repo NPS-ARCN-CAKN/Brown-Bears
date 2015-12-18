@@ -94,7 +94,7 @@ for row in arr:
         "'" + str(PointFileName) + "'," + \
         "'" + str(Notes) + "'," + \
         Geog + "," + \
-        "'@SurveyID')\n"
+        "@SurveyID)\n"
 
     # write the query to standard output
     arcpy.AddMessage(sql)
