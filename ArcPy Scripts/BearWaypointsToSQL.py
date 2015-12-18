@@ -102,6 +102,9 @@ for row in arr:
     # write the query to the sql script file
     file.write(sql)
 
+    # a convenience query for checking the inserted records
+    file.write("-- SELECT * FROM Locations WHERE SurveyID = '" + surveyid + "';")
+
 # close the output file
 file.close()
 arcpy.AddMessage('Done\n')
