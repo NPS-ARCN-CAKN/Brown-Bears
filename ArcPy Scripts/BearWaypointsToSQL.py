@@ -43,7 +43,7 @@ import getpass
 user = getpass.getuser()
 
 # write some metadata to the sql script
-file.write("-- Insert queries to transfer pilot waypoints to ARCN_Sheep database\n")
+file.write("-- Insert queries to transfer pilot waypoints to ARCN bear monitoring database\n")
 file.write("-- File generated " + executiontime + " by " + user + "\n")
 file.write("USE CompositionCountSurveys \n")
 file.write("BEGIN TRANSACTION -- Do not forget to COMMIT or ROLLBACK the changes after executing or the database will be in a locked state \n")
