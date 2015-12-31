@@ -60,7 +60,7 @@ with arcpy.da.SearchCursor(InputFile,["Shape@","UniqueID"]) as sc:
         Unit = row[1]
         WKT = Shape.WKT
         Feature = "geography::STPolyFromText('" + WKT.replace('MULTIPOLYGON','POLYGON') + "', 4326)" # sql server geography doesn't recognize multipolygon
-        # somehow an extra set of parentheses get in there
+        # somehow an extra set of parentheses gets in there
         Feature = Feature.replace('(((','((')
         Feature = Feature.replace(')))','))')
 
@@ -82,7 +82,8 @@ file.write("-- Do not forget to COMMIT or ROLLBACK the changes after executing o
 
 # a convenience query for checking the inserted records
 file.write("-- Execute the query below after committing records to retrieve the inserted records\n")
-file.write("-- SELECT * FROM SurveyUnits WHERE SurveyGroupID = '" + SurveyGroupID + "';\n")
+file.write("-- SET @SurveyGroupID = '" + SurveyGroupID + "'\n")
+file.write("-- SELECT * FROM SurveyUnits WHERE SurveyGroupID = @SurveyGroupID;\n")
 
 # close the output file
 file.close()
