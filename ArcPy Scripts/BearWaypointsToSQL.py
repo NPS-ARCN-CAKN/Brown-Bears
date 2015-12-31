@@ -107,7 +107,8 @@ file.write("-- Do not forget to COMMIT or ROLLBACK the changes after executing o
 
 # a convenience query for checking the inserted records
 file.write("-- Execute the query below after committing records to retrieve the inserted records\n")
-file.write("-- SELECT * FROM Locations WHERE SurveyID = '" + surveyid + "';\n")
+file.write("-- SET @SurveyID = '" + surveyid + "'\n")
+file.write("-- SELECT * FROM Locations WHERE SurveyID = @SurveyID;\n")
 
 # close the output file
 file.close()
