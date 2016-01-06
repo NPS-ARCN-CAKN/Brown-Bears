@@ -47,7 +47,7 @@ file.write("-- File generated " + executiontime + " by " + user + "\n")
 file.write("USE CompositionCountSurveys \n")
 file.write("BEGIN TRANSACTION -- Do not forget to COMMIT or ROLLBACK the changes after executing or the database will be in a locked state \n")
 file.write("SET QUOTED_IDENTIFIER ON\n\n")
-file.write("\n-- insert the generated transects from " + waypointfile + " -----------------------------------------------------------\n")
+file.write("\n-- insert the generated waypoints from " + waypointfile + " -----------------------------------------------------------\n")
 file.write("DECLARE @SurveyID nvarchar(50) -- SurveyID of the record in the Surveys table to which the transects below will be related\n")
 file.write("SET @SurveyID = '" + surveyid + "'\n")
 
