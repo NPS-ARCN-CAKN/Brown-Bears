@@ -106,6 +106,7 @@ file.write("-- Do not forget to COMMIT or ROLLBACK the changes after executing o
 
 # a convenience query for checking the inserted records
 file.write("-- Execute the query below after committing records to retrieve the inserted records\n")
+file.write("DECLARE @SurveyID nvarchar(50) -- SurveyID of the record in the Surveys table to which the transects below will be related\n")
 file.write("-- SET @SurveyID = '" + surveyid + "'\n")
 file.write("-- SELECT * FROM Locations WHERE SurveyID = @SurveyID;\n")
 
