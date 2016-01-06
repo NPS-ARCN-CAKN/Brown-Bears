@@ -21,7 +21,6 @@
 
 # import libraries
 import arcpy
-import numpy
 import os
 
 # get the parameters from the arctoolbox wrapper
