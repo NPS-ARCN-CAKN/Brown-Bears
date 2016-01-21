@@ -19,7 +19,7 @@
 import arcpy
 
 # get the parameters
-SurveyGroupID = 'D37FFF9F-6202-4C75-9AA8-0B94AF59C33A' #arcpy.GetParameterAsText(1) # SurveyGroupID
+SurveyGroupID = 'E47D22AC-AF6D-49AD-9235-94B98C13F924' #arcpy.GetParameterAsText(1) # SurveyGroupID
 # InputFile = r'C:\Work\VitalSigns\ARCN Brown Bears\Data\2015_BearSurvey_SewardPen-BELA\Deliverable BB-05-SurveyUnits\BELA_SP_2013_AllSurveyUnits.shp' #arcpy.GetParameterAsText(0)# Source of the GPS Tracklog
 InputFile = r'C:\Work\WEAR Wildlife Datasets Documentation and Archival\Datasets\WEAR-004-2010 Bear Survey GAAR 2010\GAAR 2010\data\Data_Forms\card files\gaar_su.shp'
 
